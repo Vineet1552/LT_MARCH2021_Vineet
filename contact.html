@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contact.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <title>contact</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Save Animals</h1>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="conn" href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+      <img class="img1" src="header.jpg" alt="">
+      
+      <div class="text">
+        <h2>For any Rescue, Any Query, Any Donation & Membership, Any Volunteership,
+          Job Openings, Any Other Matters Concerns Related To Animals Kindly
+          Contact to the given telephone numbers, phone numbers and mails.</h2>
+      </div>
+      <div class="container2">
+        <h2>Save Animals</h2>
+        <form>
+        <input type="text" class="button" id="user" placeholder="User Name"><br>
+        <input type="text" class="button" id="mail" placeholder="Email"><br>
+        <input type="password" onkeyup="passstrength();" class="button" id="userpass" placeholder="Password">
+        <script>
+            function passstrength(){
+                var userpass = document.getElementById("userpass");
+                if(userpass.value.trim().length<4){
+                    userpass.style.outline="2px solid red";
+                }
+                if(userpass.value.trim().length>=5){
+                    userpass.style.outline="2px solid yellow";
+                }
+                if(userpass.value.trim().length>=6){
+                    userpass.style.outline="2px solid lightgreen";
+                }
+                if(userpass.value.trim().length>=8){
+                    userpass.style.outline="2px solid green";
+                }
+                if(userpass.value.trim().length>=9){
+                    alert("password has reached the max limit");
+                }                   
+            }
+        </script>
+        <button class="button" onclick="myfunction()" id="confirm"><h6>Create Account</h6></button>
+        <script>
+            function myfunction(){
+                if(userpass.value.trim().length>=8){
+                    alert("Successful");
+                }
+                else{
+                    alert("you have not entered correct length of password");
+                }
+            }
+        </script>
+        <hr>
+        <h6 class="optional">OR</h6>
+        <button class="button" ><h6>Continue with Google</h6></button>
+        <h6 class="account">Already on Save Animals?     <a href="">Sign-in</a></h6>     
+        </form>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+              <h4>company</h4>
+              <ul>
+                  <li><a href="#">abuot us</a></li>
+                  <li><a href="#">contact</a></li>
+                  <li><a href="#">our services</a></li>
+                  <li><a href="#">mission & vision</a></li>
+                  <li><a href="#">privacy policy</a></li>
+                  <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>get involved</h4>
+              <ul>
+                  <li><a href="#">donate us</a></li>
+                  <li><a href="#">become a partner</a></li>
+                  <li><a href="#">register</a></li>
+                  <li><a href="#">help us</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>contact us</h4>
+              <ul>
+                  <li><a href="#">tele phone-1100 9800 1112</a></li>
+                  <li><a href="#">tele phone-1100 9800 1113</a></li>
+                  <li><a href="#">phone no.-098765433221</a></li>
+                  <li><a href="#">phone no.-091128273663</a></li>
+                  <li><a href="#">email-saveORG@gmail.com</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>follow</h4>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-snapchat"></i></a>
+              </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
